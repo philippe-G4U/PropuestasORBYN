@@ -736,11 +736,10 @@
             z-index: 2;
         }
         .fw-node .fw-sub { display: block; font-weight: 400; opacity: 0.85; margin-top: 2px; font-size: 0.85em; }
-        .fw-boost { left: 0; top: 50%; transform: translateY(-50%); background: var(--orbyn-blue); color: #fff; }
-        .fw-valion { left: 0; bottom: 0; background: var(--valion-navy); color: #fff; }
-        .fw-top-label { left: 50%; top: 0; transform: translateX(-50%); background: var(--orbyn-light-gray); color: var(--orbyn-dark); border: 1px solid #ccc; }
-        .fw-ff { left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--ff-blue); color: #fff; }
-        .fw-dozen { right: 0; top: 50%; transform: translateY(-50%); background: var(--dozen-teal); color: #fff; }
+        .fw-boost { left: 0; top: 35%; transform: translateY(-50%); background: var(--orbyn-blue); color: #fff; }
+        .fw-valion { left: 0; bottom: 5%; background: var(--valion-navy); color: #fff; }
+        .fw-ff { left: 50%; top: 35%; transform: translate(-50%, -50%); background: var(--ff-blue); color: #fff; }
+        .fw-dozen { right: 0; top: 35%; transform: translateY(-50%); background: var(--dozen-teal); color: #fff; }
         /* SVG arrows */
         .flywheel-flow svg {
             position: absolute;
@@ -1005,32 +1004,30 @@
                             </marker>
                         </defs>
                         <!-- Orbyn Boost → Fellow Funders: PYMEs buscan inversion -->
-                        <line x1="155" y1="190" x2="275" y2="190" class="fw-arrow-line"/>
-                        <text x="175" y="178" class="fw-arrow-label">PYMEs buscan inversi&oacute;n</text>
-
-                        <!-- Top label → Fellow Funders: Startups financiadas buscan capital -->
-                        <line x1="350" y1="65" x2="350" y2="155" class="fw-arrow-line"/>
-                        <text x="360" y="115" class="fw-arrow-label">Startups financiadas</text>
-                        <text x="360" y="130" class="fw-arrow-label">buscan capital</text>
+                        <line x1="155" y1="135" x2="275" y2="135" class="fw-arrow-line"/>
+                        <text x="170" y="123" class="fw-arrow-label">PYMEs buscan inversi&oacute;n</text>
 
                         <!-- Fellow Funders → Dozen: Cross-sell inversores -->
-                        <line x1="425" y1="190" x2="555" y2="190" class="fw-arrow-line"/>
-                        <text x="455" y="178" class="fw-arrow-label">Cross-sell inversores</text>
+                        <line x1="425" y1="135" x2="555" y2="135" class="fw-arrow-line"/>
+                        <text x="445" y="123" class="fw-arrow-label">Cross-sell inversores</text>
+
+                        <!-- Dozen → Fellow Funders (curved top): Startups financiadas buscan capital -->
+                        <path d="M 580 100 C 580 30, 350 30, 350 100" class="fw-arrow-line" fill="none"/>
+                        <text x="410" y="45" class="fw-arrow-label">Startups financiadas buscan capital</text>
 
                         <!-- Valion → Fellow Funders: Valoracion activos -->
-                        <line x1="155" y1="320" x2="290" y2="225" class="fw-arrow-line"/>
-                        <text x="165" y="280" class="fw-arrow-label">Valoraci&oacute;n activos</text>
+                        <line x1="155" y1="295" x2="290" y2="175" class="fw-arrow-line"/>
+                        <text x="170" y="250" class="fw-arrow-label">Valoraci&oacute;n activos</text>
 
                         <!-- Valion → Orbyn Boost: Scoring cualitativo (up arrow) -->
-                        <line x1="75" y1="295" x2="75" y2="225" class="fw-arrow-line"/>
-                        <text x="85" y="265" class="fw-arrow-label">Scoring cualitativo</text>
+                        <line x1="75" y1="270" x2="75" y2="170" class="fw-arrow-line"/>
+                        <text x="85" y="230" class="fw-arrow-label">Scoring cualitativo</text>
 
                         <!-- Dozen → Valion: Casos de exito -->
-                        <line x1="580" y1="225" x2="155" y2="320" class="fw-arrow-line"/>
-                        <text x="370" y="310" class="fw-arrow-label">Casos de &eacute;xito</text>
+                        <line x1="580" y1="170" x2="155" y2="295" class="fw-arrow-line"/>
+                        <text x="370" y="280" class="fw-arrow-label">Casos de &eacute;xito</text>
                     </svg>
                     <div class="fw-node fw-boost">Orbyn Boost<span class="fw-sub">ENISA &amp; Ayudas</span></div>
-                    <div class="fw-node fw-top-label">Startups financiadas<span class="fw-sub">buscan capital</span></div>
                     <div class="fw-node fw-ff">Fellow Funders<span class="fw-sub">Econom&iacute;a Real</span></div>
                     <div class="fw-node fw-dozen">Dozen<span class="fw-sub">Equity Startups</span></div>
                     <div class="fw-node fw-valion">Valion<span class="fw-sub">Valoraci&oacute;n con IA</span></div>
@@ -1081,7 +1078,7 @@
             <div class="slide-label reveal" style="text-align: center;">Metodolog&iacute;a</div>
             <h2 class="reveal" style="text-align: center;">3 Fases &rarr; <span class="accent">6 Meses</span></h2>
             <div class="stat-grid reveal" style="margin-top: clamp(0.8rem, 2vh, 1.2rem); grid-template-columns: repeat(3, 1fr); gap: clamp(0.5rem, 1.5vw, 1.2rem);">
-                <!-- Fase 1 -->
+                <!-- Fase 1: GTM para marcas nuevas -->
                 <div class="stat-card" style="border: 2px solid #4da6ff; border-radius: 12px; text-align: left; padding: clamp(0.6rem, 1.2vh, 1rem);">
                     <div style="font-size: clamp(1rem, 1.4vw, 1.2rem); margin-bottom: 0.2rem;">&#128218;</div>
                     <div style="font-size: var(--h3-size); font-weight: 700; line-height: 1.2;">GTM &amp; Validaci&oacute;n</div>
@@ -1090,9 +1087,10 @@
                     <div style="margin-top: clamp(0.3rem, 0.5vh, 0.4rem); display: flex; gap: 0.3rem; flex-wrap: wrap;">
                         <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--valion-navy); color: #fff; font-weight: 600;">Valion</span>
                         <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--orbyn-blue); color: #fff; font-weight: 600;">Orbyn Boost</span>
+                        <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--ff-blue); color: #fff; font-weight: 500; opacity: 0.7;">Fellow Funders *</span>
                     </div>
                 </div>
-                <!-- Fase 2 -->
+                <!-- Fase 2: Trust Engine -->
                 <div class="stat-card" style="border: 2px solid #34d399; border-radius: 12px; text-align: left; padding: clamp(0.6rem, 1.2vh, 1rem);">
                     <div style="font-size: clamp(1rem, 1.4vw, 1.2rem); margin-bottom: 0.2rem;">&#128737;</div>
                     <div style="font-size: var(--h3-size); font-weight: 700; line-height: 1.2;">Trust Engine</div>
@@ -1102,9 +1100,10 @@
                         <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--valion-navy); color: #fff; font-weight: 600;">Valion</span>
                         <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--orbyn-blue); color: #fff; font-weight: 600;">Orbyn Boost</span>
                         <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--ff-blue); color: #fff; font-weight: 600;">Fellow Funders</span>
+                        <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--dozen-teal); color: #fff; font-weight: 600;">Dozen</span>
                     </div>
                 </div>
-                <!-- Fase 3 -->
+                <!-- Fase 3: Generacion de Demanda -->
                 <div class="stat-card" style="border: 2px solid #818cf8; border-radius: 12px; text-align: left; padding: clamp(0.6rem, 1.2vh, 1rem);">
                     <div style="font-size: clamp(1rem, 1.4vw, 1.2rem); margin-bottom: 0.2rem;">&#9889;</div>
                     <div style="font-size: var(--h3-size); font-weight: 700; line-height: 1.2;">Generaci&oacute;n de Demanda</div>
@@ -1112,12 +1111,12 @@
                     <p style="font-size: var(--small-size); line-height: 1.5;"><strong>Escalamos la captaci&oacute;n.</strong> Aprendemos y potenciamos lo que sabemos que funciona, capitalizando toda la confianza generada por el Trust Engine. Comenzamos a utilizar Paid Ads.</p>
                     <div style="margin-top: clamp(0.3rem, 0.5vh, 0.4rem); display: flex; gap: 0.3rem; flex-wrap: wrap;">
                         <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--ff-blue); color: #fff; font-weight: 600;">Fellow Funders</span>
-                        <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--dozen-teal); color: #fff; font-weight: 600;">Dozen *</span>
+                        <span style="font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--dozen-teal); color: #fff; font-weight: 600;">Dozen</span>
                     </div>
                 </div>
             </div>
-            <p class="reveal" style="text-align: center; max-width: 600px; margin: clamp(0.4rem, 1vh, 0.6rem) auto 0; font-size: var(--small-size); opacity: 0.6;">
-                * Dozen: pendiente GTM completo &mdash; se incorpora a generaci&oacute;n de demanda una vez validada la base.
+            <p class="reveal" style="text-align: center; max-width: 650px; margin: clamp(0.4rem, 1vh, 0.6rem) auto 0; font-size: var(--small-size); opacity: 0.6;">
+                Fellow Funders y Dozen ya est&aacute;n en marcha (Gen. Demanda). Valion y Orbyn Boost arrancan GTM desde cero. * Fellow Funders tambi&eacute;n recibe un GTM m&aacute;s completo para potenciar cross-sell al ecosistema.
             </p>
         </div>
         <span class="slide-num">07</span>
